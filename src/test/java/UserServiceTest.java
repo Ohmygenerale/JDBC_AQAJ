@@ -9,9 +9,9 @@ import java.util.List;
 public class UserServiceTest {
     private final UserService userService = new UserServiceImpl();
 
-    private final String testName = "Ivan";
-    private final String testLastName = "Ivanov";
-    private final byte testAge = 5;
+    private final String testName = "Олег";
+    private final String testLastName = "Олегов";
+    private final byte testAge = 40;
 
 
     @Test
@@ -47,7 +47,7 @@ public class UserServiceTest {
                     || !testLastName.equals(user.getLastName())
                     || testAge != user.getAge()
             ) {
-                Assert.fail("User был некорректно добавлен в базу данных");
+                Assert.fail("Пользователь был некорректно добавлен в базу данных");
             }
 
         } catch (Exception e) {
